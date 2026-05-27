@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hi3-n0-A9g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
@@ -31,10 +31,22 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0v-To-Uvz">
                                 <rect key="frame" x="101" y="51" width="200" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNC-w1-jbS">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
+                                    <constraint firstItem="rNC-w1-jbS" firstAttribute="top" secondItem="s0v-To-Uvz" secondAttribute="top" id="0Yb-lX-k5t"/>
+                                    <constraint firstAttribute="bottom" secondItem="rNC-w1-jbS" secondAttribute="bottom" id="3lf-U2-fLp"/>
                                     <constraint firstAttribute="height" constant="80" id="EPQ-wc-iU2"/>
                                     <constraint firstAttribute="width" constant="200" id="UPJ-O8-kMu"/>
+                                    <constraint firstItem="rNC-w1-jbS" firstAttribute="leading" secondItem="s0v-To-Uvz" secondAttribute="leading" id="bZz-w9-ifQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="rNC-w1-jbS" secondAttribute="trailing" id="tZe-bV-dYq"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -53,6 +65,9 @@
                             <constraint firstItem="19d-tJ-KWd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wel-O1-CGX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblCounter" destination="rNC-w1-jbS" id="fG0-bF-PpJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
